@@ -1,0 +1,8 @@
+<label class='spec-not-select-label'>{{label}}</label>
+
+{{#with (choice options on-state=(action "notifyOnChange")) as |choices|}}
+  {{#each choices.options as |option|}}
+    {{log option}}
+    <label class='spec-not-select-option'><input type='checkbox' class='spec-not-selected-checkbox' checked={{option.isSelected}} onclick={{action choices.toggle option}}>{{option.value.name}}</label>
+  {{/each}}
+{{/with}}

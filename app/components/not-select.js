@@ -1,0 +1,1 @@
+export { default } from 'ember-not-select/components/not-select';
